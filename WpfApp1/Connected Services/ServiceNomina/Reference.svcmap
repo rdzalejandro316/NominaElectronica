@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a80bec0-a3c0-4364-985d-17222bc32984" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="781067ed-ffec-4524-9619-a02be74fdfc4" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="224d52c4-8f87-42a0-976e-a144e1f4b960" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="ee45eeb1-6c91-480b-9e1b-7542ca6a25be" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="21e02323-c202-40be-bf35-569ad1a7c7bb" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="3519e118-ed14-46c3-beb2-da63842ee6d2" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service4.xsd" MetadataType="Schema" ID="4a805f5c-8925-4655-92bc-ca8c9b8eb43c" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd5" />
+    <MetadataFile FileName="Service5.xsd" MetadataType="Schema" ID="0c147c13-ed54-4175-9cf0-0b098841a2ac" SourceId="1" SourceUrl="http://demo-nomina-soap.thefactoryhka.com.co/Service.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
