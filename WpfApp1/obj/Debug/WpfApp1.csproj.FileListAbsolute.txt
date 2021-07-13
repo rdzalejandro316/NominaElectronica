@@ -1,7 +1,6 @@
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\App.g.cs
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
@@ -13,3 +12,4 @@ C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.cspr
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\aleja\Desktop\Nomina Electronica\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache

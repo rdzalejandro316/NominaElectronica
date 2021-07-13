@@ -6,19 +6,40 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
+    <Window.Resources>
+        <SolidColorBrush Color="#0078d4" x:Key="ColorMain"/>
+        <Style TargetType="Button" x:Key="BtnStyle">
+            <Setter Property="Background" Value="{StaticResource ColorMain}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ColorMain}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>    
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
         <Grid>
-            <TextBox x:Name="rtxInformacion" Margin="10"/>
+            <TextBox x:Name="rtxInformacion" Margin="10" Background="WhiteSmoke"/>
         </Grid>
 
-        <Grid Grid.Row="1">
-            <Button Name="BtnEnviar" Content="Enviar" Click="BtnEnviar_Click"/>
-        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+            <TextBlock Text="PATH REQUEST:" FontWeight="Bold"/>
+            <TextBlock Name="TxPath" Text="...."/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="BtnEnviarMinimos" Content="Enviar Campos Minimos" Click="BtnEnviarMinimos_Click" Style="{StaticResource BtnStyle}"/>
+            <Button Name="BtnEnviarCompletos" Content="Enviar Campos Completos" Click="BtnEnviarCompletos_Click" Style="{StaticResource BtnStyle}"/>
+        </StackPanel>
 
 
     </Grid>

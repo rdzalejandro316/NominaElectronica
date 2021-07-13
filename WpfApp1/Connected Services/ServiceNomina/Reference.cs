@@ -132,7 +132,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string consecutivoDocumentoField;
+        private string consecutivoDocumentoNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.Deduccion deduccionesField;
@@ -141,13 +141,13 @@ namespace WpfApp1.ServiceNomina {
         private WpfApp1.ServiceNomina.Devengado devengadosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.DocumentoReferenciado[] documentosReferenciadosField;
+        private WpfApp1.ServiceNomina.DocumentoReferenciadoNom[] documentosReferenciadosNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string fechaEmisionField;
+        private string fechaEmisionNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.LugarGeneracionXML lugarGeneracionXMLField;
@@ -171,16 +171,16 @@ namespace WpfApp1.ServiceNomina {
         private WpfApp1.ServiceNomina.Periodo[] periodosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string rangoNumeracionField;
+        private string rangoNumeracionNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string redondeoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tipoDocumentoField;
+        private string tipoDocumentoNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tipoMonedaField;
+        private string tipoMonedaNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string tipoNotaField;
@@ -211,14 +211,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string consecutivoDocumento {
+        public string consecutivoDocumentoNom {
             get {
-                return this.consecutivoDocumentoField;
+                return this.consecutivoDocumentoNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.consecutivoDocumentoField, value) != true)) {
-                    this.consecutivoDocumentoField = value;
-                    this.RaisePropertyChanged("consecutivoDocumento");
+                if ((object.ReferenceEquals(this.consecutivoDocumentoNomField, value) != true)) {
+                    this.consecutivoDocumentoNomField = value;
+                    this.RaisePropertyChanged("consecutivoDocumentoNom");
                 }
             }
         }
@@ -250,40 +250,40 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.DocumentoReferenciado[] documentosReferenciados {
+        public WpfApp1.ServiceNomina.DocumentoReferenciadoNom[] documentosReferenciadosNom {
             get {
-                return this.documentosReferenciadosField;
+                return this.documentosReferenciadosNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.documentosReferenciadosField, value) != true)) {
-                    this.documentosReferenciadosField = value;
-                    this.RaisePropertyChanged("documentosReferenciados");
+                if ((object.ReferenceEquals(this.documentosReferenciadosNomField, value) != true)) {
+                    this.documentosReferenciadosNomField = value;
+                    this.RaisePropertyChanged("documentosReferenciadosNom");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string fechaEmision {
+        public string fechaEmisionNom {
             get {
-                return this.fechaEmisionField;
+                return this.fechaEmisionNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.fechaEmisionField, value) != true)) {
-                    this.fechaEmisionField = value;
-                    this.RaisePropertyChanged("fechaEmision");
+                if ((object.ReferenceEquals(this.fechaEmisionNomField, value) != true)) {
+                    this.fechaEmisionNomField = value;
+                    this.RaisePropertyChanged("fechaEmisionNom");
                 }
             }
         }
@@ -380,14 +380,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string rangoNumeracion {
+        public string rangoNumeracionNom {
             get {
-                return this.rangoNumeracionField;
+                return this.rangoNumeracionNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.rangoNumeracionField, value) != true)) {
-                    this.rangoNumeracionField = value;
-                    this.RaisePropertyChanged("rangoNumeracion");
+                if ((object.ReferenceEquals(this.rangoNumeracionNomField, value) != true)) {
+                    this.rangoNumeracionNomField = value;
+                    this.RaisePropertyChanged("rangoNumeracionNom");
                 }
             }
         }
@@ -406,27 +406,27 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tipoDocumento {
+        public string tipoDocumentoNom {
             get {
-                return this.tipoDocumentoField;
+                return this.tipoDocumentoNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.tipoDocumentoField, value) != true)) {
-                    this.tipoDocumentoField = value;
-                    this.RaisePropertyChanged("tipoDocumento");
+                if ((object.ReferenceEquals(this.tipoDocumentoNomField, value) != true)) {
+                    this.tipoDocumentoNomField = value;
+                    this.RaisePropertyChanged("tipoDocumentoNom");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tipoMoneda {
+        public string tipoMonedaNom {
             get {
-                return this.tipoMonedaField;
+                return this.tipoMonedaNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.tipoMonedaField, value) != true)) {
-                    this.tipoMonedaField = value;
-                    this.RaisePropertyChanged("tipoMoneda");
+                if ((object.ReferenceEquals(this.tipoMonedaNomField, value) != true)) {
+                    this.tipoMonedaNomField = value;
+                    this.RaisePropertyChanged("tipoMonedaNom");
                 }
             }
         }
@@ -532,7 +532,7 @@ namespace WpfApp1.ServiceNomina {
         private string afcField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Anticipo[] anticiposField;
+        private WpfApp1.ServiceNomina.AnticipoNom[] anticiposNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cooperativaField;
@@ -547,7 +547,7 @@ namespace WpfApp1.ServiceNomina {
         private string embargoFiscalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.FondoPension[] fondosPensionesField;
@@ -609,14 +609,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Anticipo[] anticipos {
+        public WpfApp1.ServiceNomina.AnticipoNom[] anticiposNom {
             get {
-                return this.anticiposField;
+                return this.anticiposNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.anticiposField, value) != true)) {
-                    this.anticiposField = value;
-                    this.RaisePropertyChanged("anticipos");
+                if ((object.ReferenceEquals(this.anticiposNomField, value) != true)) {
+                    this.anticiposNomField = value;
+                    this.RaisePropertyChanged("anticiposNom");
                 }
             }
         }
@@ -674,14 +674,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -862,7 +862,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Anticipo[] anticiposField;
+        private WpfApp1.ServiceNomina.AnticipoNom[] anticiposNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string apoyoSostField;
@@ -895,7 +895,7 @@ namespace WpfApp1.ServiceNomina {
         private string dotacionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.HoraExtra[] horasExtrasField;
@@ -944,14 +944,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Anticipo[] anticipos {
+        public WpfApp1.ServiceNomina.AnticipoNom[] anticiposNom {
             get {
-                return this.anticiposField;
+                return this.anticiposNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.anticiposField, value) != true)) {
-                    this.anticiposField = value;
-                    this.RaisePropertyChanged("anticipos");
+                if ((object.ReferenceEquals(this.anticiposNomField, value) != true)) {
+                    this.anticiposNomField = value;
+                    this.RaisePropertyChanged("anticiposNom");
                 }
             }
         }
@@ -1087,14 +1087,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -1278,7 +1278,7 @@ namespace WpfApp1.ServiceNomina {
         private string departamentoEstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string idiomaField;
@@ -1313,14 +1313,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -1393,7 +1393,7 @@ namespace WpfApp1.ServiceNomina {
         private string emailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string lugarTrabajoDepartamentoEstadoField;
@@ -1490,14 +1490,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -1709,9 +1709,9 @@ namespace WpfApp1.ServiceNomina {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocumentoReferenciado", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DocumentoReferenciadoNom", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
     [System.SerializableAttribute()]
-    public partial class DocumentoReferenciado : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DocumentoReferenciadoNom : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -1720,7 +1720,7 @@ namespace WpfApp1.ServiceNomina {
         private string cunePredField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaGenPredField;
@@ -1752,14 +1752,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -1802,9 +1802,9 @@ namespace WpfApp1.ServiceNomina {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Extensible", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExtensibleNom", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
     [System.SerializableAttribute()]
-    public partial class Extensible : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class ExtensibleNom : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -1906,7 +1906,7 @@ namespace WpfApp1.ServiceNomina {
         private string descripcionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1932,14 +1932,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -1964,7 +1964,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.FechaPago[] fechasPagosField;
@@ -1995,14 +1995,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2105,7 +2105,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaIngresoField;
@@ -2133,14 +2133,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2222,15 +2222,15 @@ namespace WpfApp1.ServiceNomina {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Anticipo", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AnticipoNom", Namespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents")]
     [System.SerializableAttribute()]
-    public partial class Anticipo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class AnticipoNom : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string montoanticipoField;
@@ -2246,14 +2246,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2294,7 +2294,7 @@ namespace WpfApp1.ServiceNomina {
         private string deduccionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string porcentajeField;
@@ -2323,14 +2323,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2374,7 +2374,7 @@ namespace WpfApp1.ServiceNomina {
         private string deduccionSubField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string porcentajeField;
@@ -2419,14 +2419,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2483,7 +2483,7 @@ namespace WpfApp1.ServiceNomina {
         private string descripcionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2522,14 +2522,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2554,7 +2554,10 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private string descripcionOtraDeduccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string montootraDeduccionField;
@@ -2570,14 +2573,27 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public string descripcionOtraDeduccion {
             get {
-                return this.extrasField;
+                return this.descripcionOtraDeduccionField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.descripcionOtraDeduccionField, value) != true)) {
+                    this.descripcionOtraDeduccionField = value;
+                    this.RaisePropertyChanged("descripcionOtraDeduccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
+            get {
+                return this.extrasNomField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2615,7 +2631,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string montopagoterceroField;
@@ -2631,14 +2647,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2679,7 +2695,7 @@ namespace WpfApp1.ServiceNomina {
         private string deduccionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string porcentajeField;
@@ -2708,14 +2724,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2753,7 +2769,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string sancionPrivField;
@@ -2772,14 +2788,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2833,7 +2849,7 @@ namespace WpfApp1.ServiceNomina {
         private string deduccionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string porcentajeField;
@@ -2862,14 +2878,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -2907,7 +2923,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.Licencia[] licenciaMPField;
@@ -2929,14 +2945,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3000,7 +3016,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WpfApp1.ServiceNomina.Vacaciones[] vacacionesCompensadasField;
@@ -3019,14 +3035,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3083,7 +3099,7 @@ namespace WpfApp1.ServiceNomina {
         private string auxilioSField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3122,14 +3138,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3157,7 +3173,7 @@ namespace WpfApp1.ServiceNomina {
         private string diasTrabajadosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string sueldoTrabajadoField;
@@ -3186,14 +3202,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3237,7 +3253,7 @@ namespace WpfApp1.ServiceNomina {
         private string bonificacionSField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3276,14 +3292,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3308,7 +3324,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string pagoAlimentacionNSField;
@@ -3333,14 +3349,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3417,7 +3433,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string pagoField;
@@ -3439,14 +3455,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3510,7 +3526,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string montocomisionField;
@@ -3526,14 +3542,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3577,7 +3593,7 @@ namespace WpfApp1.ServiceNomina {
         private string compensacionOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3616,14 +3632,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3651,7 +3667,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string horaFinField;
@@ -3692,14 +3708,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3792,7 +3808,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaFinField;
@@ -3824,14 +3840,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -3885,7 +3901,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaFinField;
@@ -3923,14 +3939,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4016,7 +4032,7 @@ namespace WpfApp1.ServiceNomina {
         private string descripcionConceptoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -4068,14 +4084,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4103,7 +4119,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string pagoField;
@@ -4135,14 +4151,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4196,13 +4212,13 @@ namespace WpfApp1.ServiceNomina {
         private string auxilioTransporteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string sueldoTrabajadoField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string viaticoManuAlojNSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string viaticoManuAlojSField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -4228,27 +4244,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string sueldoTrabajado {
-            get {
-                return this.sueldoTrabajadoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.sueldoTrabajadoField, value) != true)) {
-                    this.sueldoTrabajadoField = value;
-                    this.RaisePropertyChanged("sueldoTrabajado");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4262,6 +4265,19 @@ namespace WpfApp1.ServiceNomina {
                 if ((object.ReferenceEquals(this.viaticoManuAlojNSField, value) != true)) {
                     this.viaticoManuAlojNSField = value;
                     this.RaisePropertyChanged("viaticoManuAlojNS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string viaticoManuAlojS {
+            get {
+                return this.viaticoManuAlojSField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.viaticoManuAlojSField, value) != true)) {
+                    this.viaticoManuAlojSField = value;
+                    this.RaisePropertyChanged("viaticoManuAlojS");
                 }
             }
         }
@@ -4289,7 +4305,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaFinField;
@@ -4324,14 +4340,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4398,7 +4414,7 @@ namespace WpfApp1.ServiceNomina {
         private string cantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechaFinField;
@@ -4433,14 +4449,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4504,7 +4520,7 @@ namespace WpfApp1.ServiceNomina {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WpfApp1.ServiceNomina.Extensible[] extrasField;
+        private WpfApp1.ServiceNomina.ExtensibleNom[] extrasNomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string fechapagonominaField;
@@ -4520,14 +4536,14 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WpfApp1.ServiceNomina.Extensible[] extras {
+        public WpfApp1.ServiceNomina.ExtensibleNom[] extrasNom {
             get {
-                return this.extrasField;
+                return this.extrasNomField;
             }
             set {
-                if ((object.ReferenceEquals(this.extrasField, value) != true)) {
-                    this.extrasField = value;
-                    this.RaisePropertyChanged("extras");
+                if ((object.ReferenceEquals(this.extrasNomField, value) != true)) {
+                    this.extrasNomField = value;
+                    this.RaisePropertyChanged("extrasNom");
                 }
             }
         }
@@ -4589,25 +4605,28 @@ namespace WpfApp1.ServiceNomina {
         private string nitEmpleadorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] notificacionesDIANField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] notificacionesTFHKAField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string qrField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] rechazoDIANField;
+        private string[] reglasNotificacionesDIANField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] rechazoTFHKAField;
+        private string[] reglasNotificacionesTFHKAField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] reglasRechazoDIANField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] reglasRechazoTFHKAField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string resultadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string trackIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string xmlField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -4724,32 +4743,6 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] notificacionesDIAN {
-            get {
-                return this.notificacionesDIANField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.notificacionesDIANField, value) != true)) {
-                    this.notificacionesDIANField = value;
-                    this.RaisePropertyChanged("notificacionesDIAN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] notificacionesTFHKA {
-            get {
-                return this.notificacionesTFHKAField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.notificacionesTFHKAField, value) != true)) {
-                    this.notificacionesTFHKAField = value;
-                    this.RaisePropertyChanged("notificacionesTFHKA");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string qr {
             get {
                 return this.qrField;
@@ -4763,27 +4756,53 @@ namespace WpfApp1.ServiceNomina {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] rechazoDIAN {
+        public string[] reglasNotificacionesDIAN {
             get {
-                return this.rechazoDIANField;
+                return this.reglasNotificacionesDIANField;
             }
             set {
-                if ((object.ReferenceEquals(this.rechazoDIANField, value) != true)) {
-                    this.rechazoDIANField = value;
-                    this.RaisePropertyChanged("rechazoDIAN");
+                if ((object.ReferenceEquals(this.reglasNotificacionesDIANField, value) != true)) {
+                    this.reglasNotificacionesDIANField = value;
+                    this.RaisePropertyChanged("reglasNotificacionesDIAN");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] rechazoTFHKA {
+        public string[] reglasNotificacionesTFHKA {
             get {
-                return this.rechazoTFHKAField;
+                return this.reglasNotificacionesTFHKAField;
             }
             set {
-                if ((object.ReferenceEquals(this.rechazoTFHKAField, value) != true)) {
-                    this.rechazoTFHKAField = value;
-                    this.RaisePropertyChanged("rechazoTFHKA");
+                if ((object.ReferenceEquals(this.reglasNotificacionesTFHKAField, value) != true)) {
+                    this.reglasNotificacionesTFHKAField = value;
+                    this.RaisePropertyChanged("reglasNotificacionesTFHKA");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] reglasRechazoDIAN {
+            get {
+                return this.reglasRechazoDIANField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.reglasRechazoDIANField, value) != true)) {
+                    this.reglasRechazoDIANField = value;
+                    this.RaisePropertyChanged("reglasRechazoDIAN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] reglasRechazoTFHKA {
+            get {
+                return this.reglasRechazoTFHKAField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.reglasRechazoTFHKAField, value) != true)) {
+                    this.reglasRechazoTFHKAField = value;
+                    this.RaisePropertyChanged("reglasRechazoTFHKA");
                 }
             }
         }
@@ -4810,6 +4829,19 @@ namespace WpfApp1.ServiceNomina {
                 if ((object.ReferenceEquals(this.trackIdField, value) != true)) {
                     this.trackIdField = value;
                     this.RaisePropertyChanged("trackId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string xml {
+            get {
+                return this.xmlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.xmlField, value) != true)) {
+                    this.xmlField = value;
+                    this.RaisePropertyChanged("xml");
                 }
             }
         }

@@ -2,12 +2,12 @@
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Documents" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="NominaGeneral">
     <xs:sequence>
-      <xs:element minOccurs="0" name="consecutivoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="consecutivoDocumentoNom" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="deducciones" nillable="true" type="tns:Deduccion" />
       <xs:element minOccurs="0" name="devengados" nillable="true" type="tns:Devengado" />
-      <xs:element minOccurs="0" name="documentosReferenciados" nillable="true" type="tns:ArrayOfDocumentoReferenciado" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
-      <xs:element minOccurs="0" name="fechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="documentosReferenciadosNom" nillable="true" type="tns:ArrayOfDocumentoReferenciadoNom" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
+      <xs:element minOccurs="0" name="fechaEmisionNom" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lugarGeneracionXML" nillable="true" type="tns:LugarGeneracionXML" />
       <xs:element minOccurs="0" name="notas" nillable="true" type="tns:ArrayOfNota" />
       <xs:element minOccurs="0" name="novedad" nillable="true" type="xs:string" />
@@ -15,10 +15,10 @@
       <xs:element minOccurs="0" name="pagos" nillable="true" type="tns:ArrayOfPago" />
       <xs:element minOccurs="0" name="periodoNomina" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="periodos" nillable="true" type="tns:ArrayOfPeriodo" />
-      <xs:element minOccurs="0" name="rangoNumeracion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rangoNumeracionNom" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="redondeo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumentoNom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMonedaNom" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="tipoNota" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="totalComprobante" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="totalDeducciones" nillable="true" type="xs:string" />
@@ -31,12 +31,12 @@
   <xs:complexType name="Deduccion">
     <xs:sequence>
       <xs:element minOccurs="0" name="afc" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="anticipos" nillable="true" type="tns:ArrayOfAnticipo" />
+      <xs:element minOccurs="0" name="anticiposNom" nillable="true" type="tns:ArrayOfAnticipoNom" />
       <xs:element minOccurs="0" name="cooperativa" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="deuda" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="educacion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="embargoFiscal" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fondosPensiones" nillable="true" type="tns:ArrayOfFondoPension" />
       <xs:element minOccurs="0" name="fondosSP" nillable="true" type="tns:ArrayOfFondoSP" />
       <xs:element minOccurs="0" name="libranzas" nillable="true" type="tns:ArrayOfLibranza" />
@@ -52,26 +52,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Deduccion" nillable="true" type="tns:Deduccion" />
-  <xs:complexType name="ArrayOfAnticipo">
+  <xs:complexType name="ArrayOfAnticipoNom">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Anticipo" nillable="true" type="tns:Anticipo" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnticipoNom" nillable="true" type="tns:AnticipoNom" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfAnticipo" nillable="true" type="tns:ArrayOfAnticipo" />
-  <xs:complexType name="Anticipo">
+  <xs:element name="ArrayOfAnticipoNom" nillable="true" type="tns:ArrayOfAnticipoNom" />
+  <xs:complexType name="AnticipoNom">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="montoanticipo" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Anticipo" nillable="true" type="tns:Anticipo" />
-  <xs:complexType name="ArrayOfExtensible">
+  <xs:element name="AnticipoNom" nillable="true" type="tns:AnticipoNom" />
+  <xs:complexType name="ArrayOfExtensibleNom">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Extensible" nillable="true" type="tns:Extensible" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtensibleNom" nillable="true" type="tns:ExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfExtensible" nillable="true" type="tns:ArrayOfExtensible" />
-  <xs:complexType name="Extensible">
+  <xs:element name="ArrayOfExtensibleNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
+  <xs:complexType name="ExtensibleNom">
     <xs:sequence>
       <xs:element minOccurs="0" name="controlInterno1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="controlInterno2" nillable="true" type="xs:string" />
@@ -79,7 +79,7 @@
       <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Extensible" nillable="true" type="tns:Extensible" />
+  <xs:element name="ExtensibleNom" nillable="true" type="tns:ExtensibleNom" />
   <xs:complexType name="ArrayOfFondoPension">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="FondoPension" nillable="true" type="tns:FondoPension" />
@@ -89,7 +89,7 @@
   <xs:complexType name="FondoPension">
     <xs:sequence>
       <xs:element minOccurs="0" name="deduccion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="porcentaje" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -104,7 +104,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="deduccionSP" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="deduccionSub" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="porcentaje" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="porcentajeSub" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -120,7 +120,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="deduccion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Libranza" nillable="true" type="tns:Libranza" />
@@ -132,7 +132,8 @@
   <xs:element name="ArrayOfOtraDeduccion" nillable="true" type="tns:ArrayOfOtraDeduccion" />
   <xs:complexType name="OtraDeduccion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="descripcionOtraDeduccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="montootraDeduccion" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -145,7 +146,7 @@
   <xs:element name="ArrayOfPagoTercero" nillable="true" type="tns:ArrayOfPagoTercero" />
   <xs:complexType name="PagoTercero">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="montopagotercero" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -159,7 +160,7 @@
   <xs:complexType name="Salud">
     <xs:sequence>
       <xs:element minOccurs="0" name="deduccion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="porcentaje" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -172,7 +173,7 @@
   <xs:element name="ArrayOfSancion" nillable="true" type="tns:ArrayOfSancion" />
   <xs:complexType name="Sancion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="sancionPriv" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="sancionPublic" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -187,14 +188,14 @@
   <xs:complexType name="Sindicato">
     <xs:sequence>
       <xs:element minOccurs="0" name="deduccion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="porcentaje" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Sindicato" nillable="true" type="tns:Sindicato" />
   <xs:complexType name="Devengado">
     <xs:sequence>
-      <xs:element minOccurs="0" name="anticipos" nillable="true" type="tns:ArrayOfAnticipo" />
+      <xs:element minOccurs="0" name="anticiposNom" nillable="true" type="tns:ArrayOfAnticipoNom" />
       <xs:element minOccurs="0" name="apoyoSost" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="auxilios" nillable="true" type="tns:ArrayOfAuxilio" />
       <xs:element minOccurs="0" name="basico" nillable="true" type="tns:ArrayOfBasico" />
@@ -205,7 +206,7 @@
       <xs:element minOccurs="0" name="comisiones" nillable="true" type="tns:ArrayOfComision" />
       <xs:element minOccurs="0" name="compensaciones" nillable="true" type="tns:ArrayOfCompensacion" />
       <xs:element minOccurs="0" name="dotacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="horasExtras" nillable="true" type="tns:ArrayOfHoraExtra" />
       <xs:element minOccurs="0" name="huelgasLegales" nillable="true" type="tns:ArrayOfHuelgaLegal" />
       <xs:element minOccurs="0" name="incapacidades" nillable="true" type="tns:ArrayOfIncapacidad" />
@@ -231,7 +232,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="auxilioNS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="auxilioS" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Auxilio" nillable="true" type="tns:Auxilio" />
@@ -244,7 +245,7 @@
   <xs:complexType name="Basico">
     <xs:sequence>
       <xs:element minOccurs="0" name="diasTrabajados" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="sueldoTrabajado" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -259,7 +260,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="bonificacionNS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="bonificacionS" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Bonificacion" nillable="true" type="tns:Bonificacion" />
@@ -271,7 +272,7 @@
   <xs:element name="ArrayOfBonoEPCTV" nillable="true" type="tns:ArrayOfBonoEPCTV" />
   <xs:complexType name="BonoEPCTV">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="pagoAlimentacionNS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pagoAlimentacionS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pagoNS" nillable="true" type="xs:string" />
@@ -287,7 +288,7 @@
   <xs:element name="ArrayOfCesantia" nillable="true" type="tns:ArrayOfCesantia" />
   <xs:complexType name="Cesantia">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pagoIntereses" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="porcentaje" nillable="true" type="xs:string" />
@@ -302,7 +303,7 @@
   <xs:element name="ArrayOfComision" nillable="true" type="tns:ArrayOfComision" />
   <xs:complexType name="Comision">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="montocomision" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -317,7 +318,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="compensacionE" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="compensacionO" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Compensacion" nillable="true" type="tns:Compensacion" />
@@ -330,7 +331,7 @@
   <xs:complexType name="HoraExtra">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="horaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="horaInicio" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
@@ -348,7 +349,7 @@
   <xs:complexType name="HuelgaLegal">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -363,7 +364,7 @@
   <xs:complexType name="Incapacidad">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
@@ -373,7 +374,7 @@
   <xs:element name="Incapacidad" nillable="true" type="tns:Incapacidad" />
   <xs:complexType name="Licencias">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="licenciaMP" nillable="true" type="tns:ArrayOfLicencia" />
       <xs:element minOccurs="0" name="licenciaNR" nillable="true" type="tns:ArrayOfLicencia" />
       <xs:element minOccurs="0" name="licenciaR" nillable="true" type="tns:ArrayOfLicencia" />
@@ -389,7 +390,7 @@
   <xs:complexType name="Licencia">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
@@ -407,7 +408,7 @@
       <xs:element minOccurs="0" name="conceptoNS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="conceptoS" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="descripcionConcepto" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OtroConcepto" nillable="true" type="tns:OtroConcepto" />
@@ -420,7 +421,7 @@
   <xs:complexType name="Prima">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pagoNS" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -435,15 +436,15 @@
   <xs:complexType name="Transporte">
     <xs:sequence>
       <xs:element minOccurs="0" name="auxilioTransporte" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
-      <xs:element minOccurs="0" name="sueldoTrabajado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="viaticoManuAlojNS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="viaticoManuAlojS" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Transporte" nillable="true" type="tns:Transporte" />
   <xs:complexType name="Vacacion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="vacacionesCompensadas" nillable="true" type="tns:ArrayOfVacaciones" />
       <xs:element minOccurs="0" name="vacacionesComunes" nillable="true" type="tns:ArrayOfVacaciones" />
     </xs:sequence>
@@ -458,32 +459,32 @@
   <xs:complexType name="Vacaciones">
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pago" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Vacaciones" nillable="true" type="tns:Vacaciones" />
-  <xs:complexType name="ArrayOfDocumentoReferenciado">
+  <xs:complexType name="ArrayOfDocumentoReferenciadoNom">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentoReferenciado" nillable="true" type="tns:DocumentoReferenciado" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentoReferenciadoNom" nillable="true" type="tns:DocumentoReferenciadoNom" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfDocumentoReferenciado" nillable="true" type="tns:ArrayOfDocumentoReferenciado" />
-  <xs:complexType name="DocumentoReferenciado">
+  <xs:element name="ArrayOfDocumentoReferenciadoNom" nillable="true" type="tns:ArrayOfDocumentoReferenciadoNom" />
+  <xs:complexType name="DocumentoReferenciadoNom">
     <xs:sequence>
       <xs:element minOccurs="0" name="cunePred" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaGenPred" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="numeroPred" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DocumentoReferenciado" nillable="true" type="tns:DocumentoReferenciado" />
+  <xs:element name="DocumentoReferenciadoNom" nillable="true" type="tns:DocumentoReferenciadoNom" />
   <xs:complexType name="LugarGeneracionXML">
     <xs:sequence>
       <xs:element minOccurs="0" name="departamentoEstado" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="municipioCiudad" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string" />
@@ -499,7 +500,7 @@
   <xs:complexType name="Nota">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Nota" nillable="true" type="tns:Nota" />
@@ -511,7 +512,7 @@
   <xs:element name="ArrayOfPago" nillable="true" type="tns:ArrayOfPago" />
   <xs:complexType name="Pago">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechasPagos" nillable="true" type="tns:ArrayOfFechaPago" />
       <xs:element minOccurs="0" name="medioPago" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="metodoDePago" nillable="true" type="xs:string" />
@@ -529,7 +530,7 @@
   <xs:element name="ArrayOfFechaPago" nillable="true" type="tns:ArrayOfFechaPago" />
   <xs:complexType name="FechaPago">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechapagonomina" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -542,7 +543,7 @@
   <xs:element name="ArrayOfPeriodo" nillable="true" type="tns:ArrayOfPeriodo" />
   <xs:complexType name="Periodo">
     <xs:sequence>
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="fechaIngreso" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaLiquidacionFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fechaLiquidacionInicio" nillable="true" type="xs:string" />
@@ -556,7 +557,7 @@
       <xs:element minOccurs="0" name="altoRiesgoPension" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="codigoTrabajador" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:ArrayOfExtensible" />
+      <xs:element minOccurs="0" name="extrasNom" nillable="true" type="tns:ArrayOfExtensibleNom" />
       <xs:element minOccurs="0" name="lugarTrabajoDepartamentoEstado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lugarTrabajoDireccion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lugarTrabajoMunicipioCiudad" nillable="true" type="xs:string" />
