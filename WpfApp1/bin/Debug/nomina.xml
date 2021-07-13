@@ -146,6 +146,32 @@
           <tipo>2</tipo>
         </Incapacidad>
       </incapacidades>
+      <licencias>
+        <licenciaMP>
+          <Licencia>
+            <cantidad>30.00</cantidad>
+            <fechaFin>2021-03-15</fechaFin>
+            <fechaInicio>2021-03-05</fechaInicio>
+            <pago>10000.00</pago>
+          </Licencia>
+        </licenciaMP>
+        <licenciaNR>
+          <Licencia>
+            <cantidad>30.00</cantidad>
+            <fechaFin>2021-03-15</fechaFin>
+            <fechaInicio>2021-03-05</fechaInicio>
+            <pago>10000.00</pago>
+          </Licencia>
+        </licenciaNR>
+        <licenciaR>
+          <Licencia>
+            <cantidad>30.00</cantidad>
+            <fechaFin>2021-03-15</fechaFin>
+            <fechaInicio>2021-03-05</fechaInicio>
+            <pago>10000.00</pago>
+          </Licencia>
+        </licenciaR>
+      </licencias>
       <otrosConceptos>
         <OtroConcepto>
           <conceptoNS>10000.00</conceptoNS>
@@ -167,6 +193,24 @@
       </primas>
       <reintegro>10000.00</reintegro>
       <teletrabajo>10000.00</teletrabajo>
+      <vacaciones>
+        <vacacionesCompensadas>
+          <Vacaciones>
+            <cantidad>30</cantidad>
+            <fechaFin>2021-03-15</fechaFin>
+            <fechaInicio>2021-03-15</fechaInicio>
+            <pago>10000.00</pago>
+          </Vacaciones>
+        </vacacionesCompensadas>
+        <vacacionesComunes>
+          <Vacaciones>
+            <cantidad>30</cantidad>
+            <fechaFin>2021-03-15</fechaFin>
+            <fechaInicio>2021-03-15</fechaInicio>
+            <pago>10000.00</pago>
+          </Vacaciones>
+        </vacacionesComunes>
+      </vacaciones>
     </devengados>
     <documentosReferenciadosNom>
       <DocumentoReferenciadoNom>

@@ -184,7 +184,7 @@ namespace WpfApp1
 
                 request.nomina = nomina;
 
-                               
+
                 StreamWriter MyFile = new StreamWriter(ArchivoRequest);
                 XmlSerializer Serializer1 = new XmlSerializer(typeof(SrvEnvio.Request));
 
@@ -582,37 +582,44 @@ namespace WpfApp1
 
                 #region licencias
 
-                //SrvEnvio.Licencia licenciaMP = new SrvEnvio.Licencia()
-                //{
-                //    cantidad = "30.00",
-                //    fechaInicio = "2021-03-05",
-                //    fechaFin = "2021-03-15",
-                //    pago = "10000.00"
-                //};
 
-                //devengado.licencias.licenciaMP = new SrvEnvio.Licencia[1];
-                //devengado.licencias.licenciaMP[0] = licenciaMP;
+                devengado.licencias = new SrvEnvio.Licencias();
 
-                //SrvEnvio.Licencia licenciaNR = new SrvEnvio.Licencia()
-                //{
-                //    cantidad = "30.00",
-                //    fechaInicio = "2021-03-05",
-                //    fechaFin = "2021-03-15",
-                //    pago = "10000.00"
-                //};
-                //devengado.licencias.licenciaNR = new SrvEnvio.Licencia[1];
-                //devengado.licencias.licenciaNR[0] = licenciaNR;
+                #region licencia MP
+                SrvEnvio.Licencia licenciaMP = new SrvEnvio.Licencia()
+                {
+                    cantidad = "30.00",
+                    fechaInicio = "2021-03-05",
+                    fechaFin = "2021-03-15",
+                    pago = "10000.00"
+                };
+                devengado.licencias.licenciaMP = new SrvEnvio.Licencia[1];
+                devengado.licencias.licenciaMP[0] = licenciaMP;
+                #endregion
 
+                #region licencia NR                
+                SrvEnvio.Licencia licenciaNR = new SrvEnvio.Licencia()
+                {
+                    cantidad = "30.00",
+                    fechaInicio = "2021-03-05",
+                    fechaFin = "2021-03-15",
+                    pago = "10000.00"
+                };
+                devengado.licencias.licenciaNR = new SrvEnvio.Licencia[1];
+                devengado.licencias.licenciaNR[0] = licenciaNR;
+                #endregion
 
-                //SrvEnvio.Licencia licenciaR = new SrvEnvio.Licencia()
-                //{
-                //    cantidad = "30.00",
-                //    fechaInicio = "2021-03-05",
-                //    fechaFin = "2021-03-15",
-                //    pago = "10000.00"
-                //};
-                //devengado.licencias.licenciaR = new SrvEnvio.Licencia[1];
-                //devengado.licencias.licenciaR[0] = licenciaR;
+                #region licencia R                
+                SrvEnvio.Licencia licenciaR = new SrvEnvio.Licencia()
+                {
+                    cantidad = "30.00",
+                    fechaInicio = "2021-03-05",
+                    fechaFin = "2021-03-15",
+                    pago = "10000.00"
+                };
+                devengado.licencias.licenciaR = new SrvEnvio.Licencia[1];
+                devengado.licencias.licenciaR[0] = licenciaR;
+                #endregion
 
                 #endregion
 
@@ -678,32 +685,38 @@ namespace WpfApp1
 
                 #endregion
 
-
                 #region vacaciones
 
-                //SrvEnvio.Vacaciones vacaciones_compensadas = new SrvEnvio.Vacaciones()
-                //{
-                //    cantidad = "30",
-                //    fechaInicio = "2021-03-15",
-                //    fechaFin = "2021-03-15",
-                //    pago = "2021-03-15",
-                //};
+                devengado.vacaciones = new SrvEnvio.Vacacion();
 
+                #region vacaciones compensadas
 
-                ////devengado.vacaciones.vacacionesCompensadas[0] = vacaciones_compensadas;                
+                SrvEnvio.Vacaciones vacaciones_compensadas = new SrvEnvio.Vacaciones()
+                {
+                    cantidad = "30",
+                    fechaInicio = "2021-03-15",
+                    fechaFin = "2021-03-15",
+                    pago = "10000.00",
+                };
+                devengado.vacaciones.vacacionesCompensadas = new SrvEnvio.Vacaciones[1];
+                devengado.vacaciones.vacacionesCompensadas[0] = vacaciones_compensadas;
+                #endregion
 
+                #region vacaciones comunes
 
-
-
-                //devengado.vacaciones.vacacionesCompensadas = new SrvEnvio.Vacaciones[1];
-                //devengado.vacaciones.vacacionesCompensadas[0] = vacaciones_compensadas;
-
+                SrvEnvio.Vacaciones vacaciones_comunes = new SrvEnvio.Vacaciones()
+                {
+                    cantidad = "30",
+                    fechaInicio = "2021-03-15",
+                    fechaFin = "2021-03-15",
+                    pago = "10000.00",
+                };
+                devengado.vacaciones.vacacionesComunes = new SrvEnvio.Vacaciones[1];
+                devengado.vacaciones.vacacionesComunes[0] = vacaciones_comunes;
 
                 #endregion
 
-
-
-
+                #endregion
 
                 nomina.devengados = devengado;
                 #endregion
@@ -739,7 +752,7 @@ namespace WpfApp1
 
                 SrvEnvio.Nota nota = new SrvEnvio.Nota()
                 {
-                    descripcion= "nota de prueba 1"
+                    descripcion = "nota de prueba 1"
                 };
 
                 nomina.notas = new SrvEnvio.Nota[1];
@@ -816,7 +829,7 @@ namespace WpfApp1
 
                 request.nomina = nomina;
 
-               
+
                 StreamWriter MyFile = new StreamWriter(ArchivoRequest);
                 XmlSerializer Serializer1 = new XmlSerializer(typeof(SrvEnvio.Request));
 
