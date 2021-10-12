@@ -25,20 +25,30 @@
             <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
         <Grid>
             <TextBox x:Name="rtxInformacion" Margin="10" Background="WhiteSmoke"/>
         </Grid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,0,0,0">
+            <TextBlock Text="DOCUMENTO : " VerticalAlignment="Center"/>
+            <TextBox Text="NOM10020" Name="TxDoc" Width="100" VerticalAlignment="Center" Height="30"/>
+            <Button Name="BtnEstado" Click="BtnEstado_Click" Content="ESTADO" Width="100" Style="{StaticResource BtnStyle}"/>
+            <Button Name="BtnXML" Click="BtnXML_Click" Content="XML" Width="100" Style="{StaticResource BtnStyle}"/>
+            <Button Name="BtnPDF" Click="BtnPDF_Click" Content="PDF" Width="100" Style="{StaticResource BtnStyle}"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
             <TextBlock Text="PATH REQUEST:" FontWeight="Bold"/>
             <TextBlock Name="TxPath" Text="...."/>
         </StackPanel>
         
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Name="BtnEnviarMinimos" Content="Enviar Campos Minimos" Click="BtnEnviarMinimos_Click" Style="{StaticResource BtnStyle}"/>
             <Button Name="BtnEnviarCompletos" Content="Enviar Campos Completos" Click="BtnEnviarCompletos_Click" Style="{StaticResource BtnStyle}"/>
+            <Button Name="BtnEnviarAjusteMinimos" Content="AJUSTE Campos minimos" Click="BtnEnviarAjusteMinimos_Click" Style="{StaticResource BtnStyle}"/>
         </StackPanel>
 
 

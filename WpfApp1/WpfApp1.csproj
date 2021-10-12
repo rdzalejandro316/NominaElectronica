@@ -115,6 +115,18 @@
     <None Include="Connected Services\ServiceNomina\WpfApp1.ServiceNomina.Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceNomina\WpfApp1.ServiceNomina.ResponseDownloadDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceNomina\WpfApp1.ServiceNomina.ResponseFoliosRemaining.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceNomina\WpfApp1.ServiceNomina.ResponseSendEmail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceNomina\WpfApp1.ServiceNomina.ResponseStatusDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

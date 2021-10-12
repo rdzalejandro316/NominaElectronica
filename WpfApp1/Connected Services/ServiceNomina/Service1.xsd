@@ -11,4 +11,28 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="RequestConsultar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tokenEnterprise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tokenPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestConsultar" nillable="true" type="tns:RequestConsultar" />
+  <xs:complexType name="RequestConsultarDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consecutivoDocumentoNom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tokenEnterprise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tokenPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestConsultarDocumento" nillable="true" type="tns:RequestConsultarDocumento" />
+  <xs:complexType name="RequestEnviarCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consecutivoDocumentoNom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tokenEnterprise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tokenPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestEnviarCorreo" nillable="true" type="tns:RequestEnviarCorreo" />
 </xs:schema>

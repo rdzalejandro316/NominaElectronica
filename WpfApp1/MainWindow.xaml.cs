@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,8 +25,9 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         SrvEnvio.ServiceClient serviceClienteEnvio = new SrvEnvio.ServiceClient();
-        public string tokenEmpresa = "";
-        public string tokenAuthorizacion = "";
+        public string tokenEmpresa = "5288b0621f424a49b6c4f9750a3fd1e5b4884da9";
+        public string tokenAuthorizacion = "de0e20662a20462ba64bcbdf6405e6e9ac842849";
+        public string NitAutorizado = "832005853";
 
 
         string filename = "nomina.xml";
@@ -50,10 +52,10 @@ namespace WpfApp1
                 #region nomina general
 
                 SrvEnvio.NominaGeneral nomina = new SrvEnvio.NominaGeneral();
-                nomina.consecutivoDocumentoNom = "FSNE1";
+                nomina.consecutivoDocumentoNom = "NOM10021";
                 nomina.fechaEmisionNom = "2021-03-02 12:00:00";
                 nomina.periodoNomina = "4";
-                nomina.rangoNumeracionNom = "FSNE-1";
+                nomina.rangoNumeracionNom = "NOM-1";
                 nomina.redondeo = "0.00";
                 nomina.tipoDocumentoNom = "102";
                 nomina.tipoMonedaNom = "COP";
@@ -62,18 +64,7 @@ namespace WpfApp1
                 nomina.totalDeducciones = "40000.00";
                 nomina.totalDevengados = "500000.00";
 
-                #endregion
-
-                #region lugar de emision 
-
-                nomina.lugarGeneracionXML = new SrvEnvio.LugarGeneracionXML()
-                {
-                    departamentoEstado = "11",
-                    idioma = "es",
-                    municipioCiudad = "11001",
-                    pais = "CO"
-                };
-                #endregion
+                #endregion               
 
                 #region deduccion
 
@@ -118,6 +109,17 @@ namespace WpfApp1
                 nomina.devengados = devengado;
                 #endregion
 
+                #region lugar de emision 
+
+                nomina.lugarGeneracionXML = new SrvEnvio.LugarGeneracionXML()
+                {
+                    departamentoEstado = "11",
+                    idioma = "es",
+                    municipioCiudad = "11001",
+                    pais = "CO"
+                };
+                #endregion
+
                 #region pago
 
 
@@ -142,7 +144,7 @@ namespace WpfApp1
                 periodo.fechaIngreso = "2021-03-02";
                 periodo.fechaLiquidacionFin = "2021-03-04";
                 periodo.fechaLiquidacionInicio = "2021-03-03";
-                periodo.tiempoLaborado = "25 dias y medio";
+                periodo.tiempoLaborado = "3";
 
                 nomina.periodos = new SrvEnvio.Periodo[1];
                 nomina.periodos[0] = periodo;
@@ -173,14 +175,10 @@ namespace WpfApp1
                 #endregion
 
 
-
-
-
                 request.idSoftware = "123456";
-                request.nitEmpleador = "1033796537";
-                request.tokenEnterprise = "5288b0621f424a49b6c4f9750a3fd1e5b4884da9";
-                request.tokenPassword = "de0e20662a20462ba64bcbdf6405e6e9ac842849";
-
+                request.nitEmpleador = NitAutorizado;
+                request.tokenEnterprise = tokenEmpresa;
+                request.tokenPassword = tokenAuthorizacion;
 
                 request.nomina = nomina;
 
@@ -205,22 +203,63 @@ namespace WpfApp1
                     if (docRespuesta.Result.codigo == "200")
                     {
                         StringBuilder response = new StringBuilder();
-                        response.Append("Codigo **&&&&***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Codigo **ES 200***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
                         response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
                         response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                         response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                         response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+
                         rtxInformacion.Text += response.ToString();
                     }
                     else
                     {
                         StringBuilder response = new StringBuilder();
                         response.Append("ERROR EN EL ENVIO" + Environment.NewLine);
-                        response.Append("Codigo **&&&&***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Codigo **NO ES 200***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
                         response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
                         response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                         response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                         response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+
                         rtxInformacion.Text += response.ToString();
 
                     }
@@ -237,6 +276,27 @@ namespace WpfApp1
                     response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                     response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                     response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+
+                    if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                        }
+                    }
+
+                    if (docRespuesta.Result.reglasRechazoDIAN != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                        }
+                    }
+
+
                     rtxInformacion.Text += response.ToString();
                 }
 
@@ -247,7 +307,6 @@ namespace WpfApp1
                 MessageBox.Show("error al enviar:" + w);
             }
         }
-
 
         private async void BtnEnviarCompletos_Click(object sender, RoutedEventArgs e)
         {
@@ -260,10 +319,10 @@ namespace WpfApp1
                 #region nomina general
 
                 SrvEnvio.NominaGeneral nomina = new SrvEnvio.NominaGeneral();
-                nomina.consecutivoDocumentoNom = "FSNE1";
+                nomina.consecutivoDocumentoNom = "NOM10021";
                 nomina.fechaEmisionNom = "2021-03-02 12:00:00";
                 nomina.periodoNomina = "4";
-                nomina.rangoNumeracionNom = "FSNE-1";
+                nomina.rangoNumeracionNom = "NOM-1";
                 nomina.redondeo = "0.00";
                 nomina.tipoDocumentoNom = "102";
                 nomina.tipoMonedaNom = "COP";
@@ -423,9 +482,7 @@ namespace WpfApp1
 
                 #region devengado
 
-
                 SrvEnvio.Devengado devengado = new SrvEnvio.Devengado();
-
 
                 #region anticipo
 
@@ -556,7 +613,7 @@ namespace WpfApp1
 
                 SrvEnvio.HuelgaLegal huelga = new SrvEnvio.HuelgaLegal()
                 {
-                    cantidad = "30.00",
+                    cantidad = "30",
                     fechaInicio = "2021-03-05",
                     fechaFin = "2021-03-15"
                 };
@@ -565,11 +622,11 @@ namespace WpfApp1
 
                 #endregion
 
-                #region huelgas
+                #region incapacidad
 
                 SrvEnvio.Incapacidad incapacidad = new SrvEnvio.Incapacidad()
                 {
-                    cantidad = "30.00",
+                    cantidad = "30",
                     fechaInicio = "2021-03-05",
                     fechaFin = "2021-03-15",
                     pago = "10000.00",
@@ -582,13 +639,12 @@ namespace WpfApp1
 
                 #region licencias
 
-
                 devengado.licencias = new SrvEnvio.Licencias();
 
                 #region licencia MP
                 SrvEnvio.Licencia licenciaMP = new SrvEnvio.Licencia()
                 {
-                    cantidad = "30.00",
+                    cantidad = "30",
                     fechaInicio = "2021-03-05",
                     fechaFin = "2021-03-15",
                     pago = "10000.00"
@@ -600,7 +656,7 @@ namespace WpfApp1
                 #region licencia NR                
                 SrvEnvio.Licencia licenciaNR = new SrvEnvio.Licencia()
                 {
-                    cantidad = "30.00",
+                    cantidad = "30",
                     fechaInicio = "2021-03-05",
                     fechaFin = "2021-03-15",
                     pago = "10000.00"
@@ -612,7 +668,7 @@ namespace WpfApp1
                 #region licencia R                
                 SrvEnvio.Licencia licenciaR = new SrvEnvio.Licencia()
                 {
-                    cantidad = "30.00",
+                    cantidad = "30",
                     fechaInicio = "2021-03-05",
                     fechaFin = "2021-03-15",
                     pago = "10000.00"
@@ -790,7 +846,7 @@ namespace WpfApp1
                 periodo.fechaIngreso = "2021-03-02";
                 periodo.fechaLiquidacionFin = "2021-03-04";
                 periodo.fechaLiquidacionInicio = "2021-03-03";
-                periodo.tiempoLaborado = "25 dias y medio";
+                periodo.tiempoLaborado = "3";
 
                 nomina.periodos = new SrvEnvio.Periodo[1];
                 nomina.periodos[0] = periodo;
@@ -822,9 +878,9 @@ namespace WpfApp1
 
 
                 request.idSoftware = "123456";
-                request.nitEmpleador = "1033796537";
-                request.tokenEnterprise = "5288b0621f424a49b6c4f9750a3fd1e5b4884da9";
-                request.tokenPassword = "de0e20662a20462ba64bcbdf6405e6e9ac842849";
+                request.nitEmpleador = NitAutorizado;
+                request.tokenEnterprise = tokenEmpresa;
+                request.tokenPassword = tokenAuthorizacion;
 
 
                 request.nomina = nomina;
@@ -850,22 +906,57 @@ namespace WpfApp1
                     if (docRespuesta.Result.codigo == "200")
                     {
                         StringBuilder response = new StringBuilder();
-                        response.Append("Codigo **&&&&***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Codigo 200**&&&&***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
                         response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
                         response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                         response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                         response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
                         rtxInformacion.Text += response.ToString();
                     }
                     else
                     {
                         StringBuilder response = new StringBuilder();
                         response.Append("ERROR EN EL ENVIO" + Environment.NewLine);
-                        response.Append("Codigo **&&&&***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Codigo #######" + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
                         response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
                         response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                         response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                         response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
                         rtxInformacion.Text += response.ToString();
 
                     }
@@ -882,6 +973,23 @@ namespace WpfApp1
                     response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
                     response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
                     response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+                    if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                        }
+                    }
+
+                    if (docRespuesta.Result.reglasRechazoDIAN != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                        }
+                    }
                     rtxInformacion.Text += response.ToString();
                 }
 
@@ -893,6 +1001,376 @@ namespace WpfApp1
             }
         }
 
+        private async void BtnEstado_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SrvEnvio.RequestConsultarDocumento requestConsultarDocumento = new SrvEnvio.RequestConsultarDocumento();
+                requestConsultarDocumento.consecutivoDocumentoNom = TxDoc.Text;
+                requestConsultarDocumento.tokenEnterprise = tokenEmpresa;
+                requestConsultarDocumento.tokenPassword = tokenAuthorizacion;
 
+                var request = await serviceClienteEnvio.EstadoDocumentoAsync(requestConsultarDocumento);
+
+                rtxInformacion.Text += request.cadenaCodigoQR;
+                rtxInformacion.Text += request.codigo;
+                rtxInformacion.Text += request.consecutivo;
+                rtxInformacion.Text += request.descripcionDocumento;
+                rtxInformacion.Text += request.resultado;
+
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error en ver el estado del documento:" + w);
+            }
+        }
+
+        private async void BtnXML_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SrvEnvio.RequestConsultarDocumento requestConsultarDocumento = new SrvEnvio.RequestConsultarDocumento();
+                requestConsultarDocumento.consecutivoDocumentoNom = TxDoc.Text;
+                requestConsultarDocumento.tokenEnterprise = tokenEmpresa;
+                requestConsultarDocumento.tokenPassword = tokenAuthorizacion;
+                SrvEnvio.ResponseDownloadDocument request = await serviceClienteEnvio.DescargaXMLAsync(requestConsultarDocumento);
+                
+                if (request.codigo == 200)
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "XML|*.xml";
+                    saveFileDialog.Title = "Save File";
+                    saveFileDialog.ShowDialog();
+
+                    if (!string.IsNullOrEmpty(saveFileDialog.FileName))
+                    {
+                        string path = saveFileDialog.FileName;
+                        File.WriteAllBytes(path, Convert.FromBase64String(request.documento));
+                        MessageBox.Show("se guardo el archivo exitosamente", "alerta", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+
+
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error al descargar el XML:" + w);
+            }
+        }
+
+        private async void BtnPDF_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SrvEnvio.RequestConsultarDocumento requestConsultarDocumento = new SrvEnvio.RequestConsultarDocumento();
+                requestConsultarDocumento.consecutivoDocumentoNom = TxDoc.Text;
+                requestConsultarDocumento.tokenEnterprise = tokenEmpresa;
+                requestConsultarDocumento.tokenPassword = tokenAuthorizacion;
+                SrvEnvio.ResponseDownloadDocument request = await serviceClienteEnvio.DescargaPDFAsync(requestConsultarDocumento);
+
+                if (request.codigo == 200)
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Pdf|*.pdf";
+                    saveFileDialog.Title = "Save File";
+                    saveFileDialog.ShowDialog();
+
+                    if (!string.IsNullOrEmpty(saveFileDialog.FileName))
+                    {
+                        string path = saveFileDialog.FileName;
+                        File.WriteAllBytes(path, Convert.FromBase64String(request.documento));
+                        MessageBox.Show("se guardo el archivo exitosamente", "alerta", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+                
+
+
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error al descargar el XML:" + w);
+            }
+        }
+
+        private async void BtnEnviarAjusteMinimos_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                SrvEnvio.Request request = new SrvEnvio.Request();
+
+
+                #region nomina general
+
+                SrvEnvio.NominaGeneral nomina = new SrvEnvio.NominaGeneral();
+                nomina.consecutivoDocumentoNom = "AJ112";
+                nomina.fechaEmisionNom = "2021-03-02 12:00:00";
+                nomina.periodoNomina = "4";
+                nomina.rangoNumeracionNom = "AJ-1";
+                nomina.redondeo = "0.00";
+                nomina.tipoDocumentoNom = "103";
+                nomina.tipoNota = "1";
+                nomina.tipoMonedaNom = "COP";
+                nomina.trm = "3000.00";
+                nomina.totalComprobante = "410000.00";
+                nomina.totalDeducciones = "40000.00";
+                nomina.totalDevengados = "500000.00";
+
+                #endregion               
+
+                #region deduccion
+
+
+                SrvEnvio.Deduccion deduccion = new SrvEnvio.Deduccion();
+
+                SrvEnvio.FondoPension fondo = new SrvEnvio.FondoPension()
+                {
+                    deduccion = "10000.00",
+                    porcentaje = "10.00"
+                };
+                deduccion.fondosPensiones = new SrvEnvio.FondoPension[1];
+                deduccion.fondosPensiones[0] = fondo;
+
+                SrvEnvio.Salud salud = new SrvEnvio.Salud
+                {
+                    deduccion = "10000.00",
+                    porcentaje = "10.00"
+                };
+                deduccion.salud = new SrvEnvio.Salud[1];
+                deduccion.salud[0] = salud;
+
+                nomina.deducciones = deduccion;
+
+
+
+                #endregion
+
+                #region devengado
+
+
+                SrvEnvio.Devengado devengado = new SrvEnvio.Devengado();
+
+                SrvEnvio.Basico basico = new SrvEnvio.Basico()
+                {
+                    diasTrabajados = "15",
+                    sueldoTrabajado = "500000.00"
+                };
+                devengado.basico = new SrvEnvio.Basico[1];
+                devengado.basico[0] = basico;
+
+                nomina.devengados = devengado;
+                #endregion
+
+
+                #region ajuste documento
+                SrvEnvio.DocumentoReferenciadoNom referenciadosNom = new SrvEnvio.DocumentoReferenciadoNom();
+                referenciadosNom.cunePred = "7b37fe921b2c14452ea6553ee70db5f60bbdfdf0135418a1fc51de98158e61660252b81abaaf4f9bdffad09b7c5ec555";
+                referenciadosNom.fechaGenPred = "2021-03-04";
+                referenciadosNom.numeroPred = "NOM10012";
+
+                nomina.documentosReferenciadosNom = new SrvEnvio.DocumentoReferenciadoNom[1];
+                nomina.documentosReferenciadosNom[0] = referenciadosNom;
+
+
+                #endregion
+
+                #region lugar de emision 
+
+                nomina.lugarGeneracionXML = new SrvEnvio.LugarGeneracionXML()
+                {
+                    departamentoEstado = "11",
+                    idioma = "es",
+                    municipioCiudad = "11001",
+                    pais = "CO"
+                };
+                #endregion
+
+                #region pago
+
+
+                SrvEnvio.FechaPago fechaPago = new SrvEnvio.FechaPago();
+                fechaPago.fechapagonomina = "2021-03-15";
+
+
+                SrvEnvio.Pago pago = new SrvEnvio.Pago();
+                pago.fechasPagos = new SrvEnvio.FechaPago[1];
+                pago.fechasPagos[0] = fechaPago;
+                pago.medioPago = "ZZZ";
+                pago.metodoDePago = "1";
+                pago.nombreBanco = "Nombre del Banco";
+                pago.numeroCuenta = "123456789";
+                pago.tipoCuenta = "Ahorro";
+
+                nomina.pagos = new SrvEnvio.Pago[1];
+                nomina.pagos[0] = pago;
+
+
+                SrvEnvio.Periodo periodo = new SrvEnvio.Periodo();
+                periodo.fechaIngreso = "2021-03-02";
+                periodo.fechaLiquidacionFin = "2021-03-04";
+                periodo.fechaLiquidacionInicio = "2021-03-03";
+                periodo.tiempoLaborado = "3";
+
+                nomina.periodos = new SrvEnvio.Periodo[1];
+                nomina.periodos[0] = periodo;
+
+                #endregion
+
+                #region datos trabajador               
+                nomina.trabajador = new SrvEnvio.Trabajador()
+                {
+                    altoRiesgoPension = "0",
+                    codigoTrabajador = "A527",
+                    email = "jorge.alejandro@siasoftsas.com",
+                    lugarTrabajoDepartamentoEstado = "11",
+                    lugarTrabajoDireccion = "crr 5 # 49 d 230 sur",
+                    lugarTrabajoMunicipioCiudad = "11001",
+                    lugarTrabajoPais = "CO",
+                    numeroDocumento = "1033796537",
+                    primerApellido = "garcia",
+                    primerNombre = "Anderson ",
+                    salarioIntegral = "0",
+                    segundoApellido = "marica",
+                    subTipoTrabajador = "01",
+                    sueldo = "500000.00",
+                    tipoContrato = "1",
+                    tipoIdentificacion = "31",
+                    tipoTrabajador = "01"
+                };
+                #endregion
+
+
+                request.idSoftware = "123456";
+                request.nitEmpleador = NitAutorizado;
+                request.tokenEnterprise = tokenEmpresa;
+                request.tokenPassword = tokenAuthorizacion;
+
+                request.nomina = nomina;
+
+
+                StreamWriter MyFile = new StreamWriter(ArchivoRequest);
+                XmlSerializer Serializer1 = new XmlSerializer(typeof(SrvEnvio.Request));
+
+                Serializer1.Serialize(MyFile, request);
+                MyFile.Close();
+
+
+
+                rtxInformacion.Text += "** asincoron ** ";
+                Task<SrvEnvio.Response> docRespuesta;
+                docRespuesta = serviceClienteEnvio.EnviarAsync(request);
+                await docRespuesta;
+
+                if (docRespuesta.IsCompleted)
+                {
+
+                    rtxInformacion.Text += "** INICIA ** ";
+                    if (docRespuesta.Result.codigo == "200")
+                    {
+                        StringBuilder response = new StringBuilder();
+                        response.Append("AJUSTE Codigo **ES 200***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
+                        response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
+                        response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
+                        response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+
+                        rtxInformacion.Text += response.ToString();
+                    }
+                    else
+                    {
+                        StringBuilder response = new StringBuilder();
+                        response.Append("ERROR EN EL ENVIO" + Environment.NewLine);
+                        response.Append("AJUSTE Codigo **NO ES 200***: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                        response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
+                        response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
+                        response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
+                        response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+
+                        if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+                        if (docRespuesta.Result.reglasRechazoDIAN != null)
+                        {
+                            int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                            for (int i = 0; i < nReturnMsg; i++)
+                            {
+                                response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                            }
+                        }
+
+
+                        rtxInformacion.Text += response.ToString();
+
+                    }
+
+                    rtxInformacion.Text += "** ENVIA ** ";
+
+                }
+                else
+                {
+                    rtxInformacion.Text += "** FALLo ** ";
+                    StringBuilder response = new StringBuilder();
+                    response.Append("AJUSTE Codigo: " + docRespuesta.Result.codigo.ToString() + Environment.NewLine);
+                    response.Append("Consecutivo Documento: " + docRespuesta.Result.consecutivoDocumento + Environment.NewLine);
+                    response.Append("Cufe: " + docRespuesta.Result.cune + Environment.NewLine);
+                    response.Append("Mensaje: " + docRespuesta.Result.mensaje + Environment.NewLine);
+                    response.Append("Resultado: " + docRespuesta.Result.resultado + Environment.NewLine);
+
+
+                    if (docRespuesta.Result.reglasRechazoTFHKA != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoTFHKA.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO TFHKA: " + docRespuesta.Result.reglasRechazoTFHKA[i].ToString() + Environment.NewLine);
+                        }
+                    }
+
+                    if (docRespuesta.Result.reglasRechazoDIAN != null)
+                    {
+                        int nReturnMsg = docRespuesta.Result.reglasRechazoDIAN.Count();
+                        for (int i = 0; i < nReturnMsg; i++)
+                        {
+                            response.Append("RECHAZO DIAN: " + docRespuesta.Result.reglasRechazoDIAN[i].ToString() + Environment.NewLine);
+                        }
+                    }
+
+
+                    rtxInformacion.Text += response.ToString();
+                }
+
+
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error al enviar:" + w);
+            }
+        }
     }
 }

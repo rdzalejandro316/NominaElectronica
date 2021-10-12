@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NominaIndividual xmlns="dian:gov:co:facturaelectronica:NominaIndividual" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaLocation="" xsi:schemaLocation="dian:gov:co:facturaelectronica:NominaIndividual NominaIndividualElectronicaXSD.xsd">
+  <ext:UBLExtensions><ext:UBLExtension><ext:ExtensionContent><ds:Signature Id="xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference Id="xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-ref0" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>0kGHhfzj3UtK2xdCDteHO3ujnwHkx6MaG98tkhdjYw0=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-keyinfo">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>xyvKnehFEp62qvXSqVxY4KbrVUY6fdIwYLdBliR9qMw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-signedprops">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>kcBVg856iA8BfAr1TF5Smyb8PkYnvE2Yj7XiSz1Gg/c=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-sigvalue">
+aK6vNW5kGsCGRaFwMl6uvzpfPV5atFsVzPYT6b6PB2owgvYZpyMrWduxIWZlVMftg7tVh8PcBOQA
+kpWEV400s5yuFVReR4xj5qev4sXk10hkMMpdCLKu78IsgvPrnsoPAlDP0cqpsodmy867ymsr+wZY
+ssM7Ey3+N+nF7MbhJsEw+vhU1JQ/UyLmbpMFfVLMbHE8S5SAwWEjkG3CTgtGXyfXIFT9NCzmOdKf
+vCvxt5dGLr2+rLyHKXeOssJ65H5CZ7CGKCul4DzdFqSd1AE4ZgetpEG4reKfgru87IGMJ5HIDjLr
+Q5sFeXTcPV3nOe4NywXLEgB/e6akBHDOfPsAzg==
+</ds:SignatureValue>
+<ds:KeyInfo Id="xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-keyinfo">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIIhjCCBm6gAwIBAgIIZYgPZC87zNkwDQYJKoZIhvcNAQELBQAwgbYxIzAhBgkqhkiG9w0BCQEW
+FGluZm9AYW5kZXNzY2QuY29tLmNvMSYwJAYDVQQDEx1DQSBBTkRFUyBTQ0QgUy5BLiBDbGFzZSBJ
+SSB2MjEwMC4GA1UECxMnRGl2aXNpb24gZGUgY2VydGlmaWNhY2lvbiBlbnRpZGFkIGZpbmFsMRIw
+EAYDVQQKEwlBbmRlcyBTQ0QxFDASBgNVBAcTC0JvZ290YSBELkMuMQswCQYDVQQGEwJDTzAeFw0y
+MDA0MDgyMjE4MDBaFw0yMjA0MDgyMjE3MDBaMIIBQjEeMBwGA1UECQwVQVYgQ0FMTEUgODAgbsKw
+IDY5LTcwMScwJQYJKoZIhvcNAQkBFhhtcm9qYXNAdGhlZmFjdG9yeWhrYS5jb20xKDAmBgNVBAMT
+H1RIRSBGQUNUT1JZIEhLQSBDT0xPTUJJQSBTLkEuUy4xEzARBgNVBAUTCjkwMDM5MDEyNjYxNjA0
+BgNVBAwTLUVtaXNvciBGYWN0dXJhIEVsZWN0cm9uaWNhIC0gUGVyc29uYSBKdXJpZGljYTE6MDgG
+A1UECxMxRW1pdGlkbyBwb3IgQW5kZXMgU0NEIEFjIDI2IDY5QyAwMyBUb3JyZSBCIE9mIDcwMTEQ
+MA4GA1UEChMHR0VSRU5URTEPMA0GA1UEBxMGQk9HT1RBMRQwEgYDVQQIEwtCT0dPVEEgRC5DLjEL
+MAkGA1UEBhMCQ08wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDjZOwNmE0N1HAk1fMR
+PH2IMP3tmM2B7+m7ww0ZpQWxVnBg8b2BOEHNoda1Vr9yMYQWr+7AcFAAZBm/45xhDcPEVwz4s1Yp
+UzSyQwIBRxnkihFuYp3wVD/Ajj9d7MDBxIH3s8fUoNoSox1rTilYmfjDvnNDEgCe2NjWD+Iv8UbT
+7gi88KwoXR+G56diGl13/liqV71F6KG+xywtwqLQ5eyH5rxRY03hTAp2Cu5nXVLUyop+/8n3f9qY
+lU4d1W0RP/JbAIRyU6hKIRe1f7oHHpZDefWy6RCR+9zlqYf126yMssDajQNHVHLNGQepPty5rCMA
+NtBebeZsCBZGCm18tVndAgMBAAGjggMHMIIDAzAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFDpX
+UNB3Gz7Wi+r/l5nX/4QCSCkPMDcGCCsGAQUFBwEBBCswKTAnBggrBgEFBQcwAYYbaHR0cDovL29j
+c3AuYW5kZXNzY2QuY29tLmNvMCMGA1UdEQQcMBqBGG1yb2phc0B0aGVmYWN0b3J5aGthLmNvbTCC
+AekGA1UdIASCAeAwggHcMIIB2AYNKwYBBAGB9EgBAgYBAzCCAcUwggF+BggrBgEFBQcCAjCCAXAe
+ggFsAEwAYQAgAHUAdABpAGwAaQB6AGEAYwBpAPMAbgAgAGQAZQAgAGUAcwB0AGUAIABjAGUAcgB0
+AGkAZgBpAGMAYQBkAG8AIABlAHMAdADhACAAcwB1AGoAZQB0AGEAIABhACAAbABhAHMAIABQAG8A
+bADtAHQAaQBjAGEAcwAgAGQAZQAgAEMAZQByAHQAaQBmAGkAYwBhAGQAbwAgAGQAZQAgAEMAbwBt
+AHUAbgBpAGQAYQBkACAAQQBjAGEAZADpAG0AaQBjAGEAIAAoAFAAQwApACAAeQAgAEQAZQBjAGwA
+YQByAGEAYwBpAPMAbgAgAGQAZQAgAFAAcgDhAGMAdABpAGMAYQBzACAAZABlACAAQwBlAHIAdABp
+AGYAaQBjAGEAYwBpAPMAbgAgACgARABQAEMAKQAgAGUAcwB0AGEAYgBsAGUAYwBpAGQAYQBzACAA
+cABvAHIAIABBAG4AZABlAHMAIABTAEMARDBBBggrBgEFBQcCARY1aHR0cDovL3d3dy5hbmRlc3Nj
+ZC5jb20uY28vZG9jcy9EUENfQW5kZXNTQ0RfVjMuMi5wZGYwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMEMDkGA1UdHwQyMDAwLqAsoCqGKGh0dHA6Ly9jcmwuYW5kZXNzY2QuY29tLmNvL0Ns
+YXNlSUl2Mi5jcmwwHQYDVR0OBBYEFFaqBKyPoKL6dyCJZcvlWNslMVEXMA4GA1UdDwEB/wQEAwIF
+4DANBgkqhkiG9w0BAQsFAAOCAgEATBZLBcth69pqy+OFB37VjIluKDQofOm/njfhLufLPCWQi4/L
+aoiNn0mSLJDSFIV2pQ7+H2WsKJisQYAy2ZjbAJr7Y3AUWXVAPuGD8J4ehb9/xnw2yeIfX+Q33OGd
+HlZCWpUbuWVpbz9Jg1pKnc2N/8l87JcHTC79Gqzwod/yfSTolubU/5CaopnJUFoOXYjkYa0LFHT/
+O2S13odYtW7R7GJ8y34/PVmqWQzIYTU/IUAKJbSCNuLJk0ofo9mYFaxweJJfMWPzj4SntZugUSiB
+WGV1BFRVXzx0g2VIBCbQaPAWjD+gPQHvhOJn4N5rIXtLlM9tilWjngGq/SoCSJs3KCaKCdnpegtA
+Pmut4blIL8snDRhcFwGQLI00Wtph7LQJZ0aI7pC6tv/nFCyM9s/6YuxCOsv7zeF7FveupBjGR/X1
+eWT1rphuX6k/wMADKJAGf6C50d9hUhnJgLdA8BtPtyWUpVgLniCMZFDuRnLV76klvfVpvyhxiYlQ
+GPd5305icij+VSmETpBp+UtfC/2Z7LImWrUwT8OkD4IPC8E5Hsks+ofS79nsavPR9cTrzeELOw82
+YsHvBMNpC9XrE2jmoG3Lt112BkVqNNjlsxc7Rf5ttsN639b/jAhKeewhqbRLwTypVWplDZj+429T
+t5AvV2gK7Ai1vGBsu95Hz7K0GmI=
+</ds:X509Certificate>
+<ds:X509SubjectName>C=CO,ST=BOGOTA D.C.,L=BOGOTA,O=GERENTE,OU=Emitido por Andes SCD Ac 26 69C 03 Torre B Of 701,T=Emisor Factura Electronica - Persona Juridica,SERIALNUMBER=9003901266,CN=THE FACTORY HKA COLOMBIA S.A.S.,EMAILADDRESS=mrojas@thefactoryhka.com,STREET=AV CALLE 80 n° 69-70</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion entidad final,CN=CA ANDES SCD S.A. Clase II v2,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName>
+<ds:X509SerialNumber>7316114517626965209</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b"><xades:SignedProperties Id="xmldsig-2e407a82-cbe3-44ba-838a-b6335162e42b-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2021-10-12T09:08:23.710-05:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>VALSBQ3DDNh8IZraZbDhA7QZ+4A7YjtwkcSmFMfnnTk=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion entidad final,CN=CA ANDES SCD S.A. Clase II v2,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName><ds:X509SerialNumber>7316114517626965209</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://facturaelectronica.dian.gov.co/politicadefirma/v2/politicadefirmav2.pdf</xades:Identifier><xades:Description>Política de firma para facturas electrónicas de la República de Colombia</xades:Description></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>dMoMvtcG5aIzgYo0tIsSQeVJBDnUnfSOfBpxXrmor0Y=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></ext:ExtensionContent></ext:UBLExtension></ext:UBLExtensions>
+  <Novedad CUNENov="000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000">false</Novedad>
+  <Periodo FechaGen="2021-10-12" FechaIngreso="2021-03-02" FechaLiquidacionFin="2021-03-04" FechaLiquidacionInicio="2021-03-03" TiempoLaborado="3"/>
+  <NumeroSecuenciaXML CodigoTrabajador="A527" Consecutivo="10020" Numero="NOM10020" Prefijo="NOM"/>
+  <LugarGeneracionXML DepartamentoEstado="11" Idioma="es" MunicipioCiudad="11001" Pais="CO"/>
+  <ProveedorXML DV="6" NIT="900390126" RazonSocial="The Factory HKA" SoftwareID="d5e5936b-72c0-4013-a8e9-848a7a8dcb44" SoftwareSC="85e16b066128b2d1eb8ebf24ae0cf0c34fc9753c50a0ba6e9722c96f41d81e6c74864e78b3ccf2b7c6fb67b400f33db7"/>
+  <CodigoQR>NumNIE: NOM10020
+FecNIE: 2021-03-02
+HorNIE: 12:00:00-05:00
+NitNIE: 900390126
+DocEmp: 1033796537
+ValDev: 500000.00
+ValDed: 40000.00
+ValTol: 410000.00
+CUNE: 9234da0ea34df35f8a65f8da311fa913561d7339259e775cd5413369597390f8b789b86915e1f06d51b1dc9290eefea2
+https://catalogo-vpfe-hab.dian.gov.co/document/searchqr?documentkey=9234da0ea34df35f8a65f8da311fa913561d7339259e775cd5413369597390f8b789b86915e1f06d51b1dc9290eefea2</CodigoQR>
+  <InformacionGeneral Ambiente="2" CUNE="9234da0ea34df35f8a65f8da311fa913561d7339259e775cd5413369597390f8b789b86915e1f06d51b1dc9290eefea2" EncripCUNE="CUNE-SHA384" FechaGen="2021-03-02" HoraGen="12:00:00-05:00" PeriodoNomina="4" TRM="3000.00" TipoMoneda="COP" TipoXML="102" Version="V1.0: Documento Soporte de Pago de Nómina Electrónica"/>
+  <Notas>nota de prueba 1</Notas>
+  <Empleador DV="6" DepartamentoEstado="11" Direccion="Direccion de prueba" MunicipioCiudad="11001" NIT="900390126" Pais="CO" RazonSocial="SIASOFT SAS"/>
+  <Trabajador AltoRiesgoPension="false" CodigoTrabajador="A527" LugarTrabajoDepartamentoEstado="11" LugarTrabajoDireccion="crr 5 # 49 d 230 sur" LugarTrabajoMunicipioCiudad="11001" LugarTrabajoPais="CO" NumeroDocumento="1033796537" PrimerApellido="garcia" PrimerNombre="Anderson" SalarioIntegral="false" SegundoApellido="rojas" SubTipoTrabajador="01" Sueldo="500000.00" TipoContrato="1" TipoDocumento="31" TipoTrabajador="01"/>
+  <Pago Banco="Nombre del Banco" Forma="1" Metodo="ZZZ" NumeroCuenta="123456789" TipoCuenta="Ahorro"/>
+  <FechasPagos>
+    <FechaPago>2021-03-15</FechaPago>
+  </FechasPagos>
+  <Devengados>
+    <Basico DiasTrabajados="30" SueldoTrabajado="500000.00"/>
+    <HEDs>
+      <HED Cantidad="10000.00" HoraFin="2021-03-02T12:00:00" HoraInicio="2021-03-02T12:00:00" Pago="10000.00" Porcentaje="25.00"/>
+    </HEDs>
+    <Vacaciones>
+      <VacacionesComunes Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-15" Pago="10000.00"/>
+      <VacacionesCompensadas Cantidad="30" Pago="10000.00"/>
+    </Vacaciones>
+    <Primas Cantidad="30" Pago="10000.00" PagoNS="10000.00"/>
+    <Cesantias Pago="10000.00" PagoIntereses="10000.00" Porcentaje="10.00"/>
+    <Incapacidades>
+      <Incapacidad Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-05" Pago="10000.00" Tipo="2"/>
+    </Incapacidades>
+    <Licencias>
+      <LicenciaMP Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-05" Pago="10000.00"/>
+      <LicenciaR Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-05" Pago="10000.00"/>
+      <LicenciaNR Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-05"/>
+    </Licencias>
+    <Bonificaciones>
+      <Bonificacion BonificacionNS="10000.00" BonificacionS="10000.00"/>
+    </Bonificaciones>
+    <Auxilios>
+      <Auxilio AuxilioNS="10000.00" AuxilioS="10000.00"/>
+    </Auxilios>
+    <HuelgasLegales>
+      <HuelgaLegal Cantidad="30" FechaFin="2021-03-15" FechaInicio="2021-03-05"/>
+    </HuelgasLegales>
+    <OtrosConceptos>
+      <OtroConcepto ConceptoNS="10000.00" ConceptoS="10000.00" DescripcionConcepto="Descipcion Generica"/>
+    </OtrosConceptos>
+    <Compensaciones>
+      <Compensacion CompensacionE="10000.00" CompensacionO="10000.00"/>
+    </Compensaciones>
+    <BonoEPCTVs>
+      <BonoEPCTV PagoAlimentacionNS="10000.00" PagoAlimentacionS="10000.00" PagoNS="10000.00" PagoS="10000.00"/>
+    </BonoEPCTVs>
+    <Comisiones>
+      <Comision>10000.00</Comision>
+    </Comisiones>
+    <PagosTerceros>
+      <PagoTercero>10000.00</PagoTercero>
+    </PagosTerceros>
+    <Anticipos>
+      <Anticipo>100000.00</Anticipo>
+    </Anticipos>
+    <ApoyoSost>10000.00</ApoyoSost>
+    <Teletrabajo>10000.00</Teletrabajo>
+    <BonifRetiro>10000.00</BonifRetiro>
+    <Reintegro>10000.00</Reintegro>
+  </Devengados>
+  <Deducciones>
+    <Salud Deduccion="10000.00" Porcentaje="10.00"/>
+    <FondoPension Deduccion="10000.00" Porcentaje="10.00"/>
+    <FondoSP DeduccionSP="10000.00" DeduccionSub="10000.00" Porcentaje="10.00" PorcentajeSub="10.00"/>
+    <Sindicatos>
+      <Sindicato Deduccion="10000.00" Porcentaje="10.00"/>
+    </Sindicatos>
+    <Sanciones>
+      <Sancion SancionPriv="10000.00" SancionPublic="10000.00"/>
+    </Sanciones>
+    <Libranzas>
+      <Libranza Deduccion="10000.00" Descripcion="Descripcion General de Libranza"/>
+    </Libranzas>
+    <PagosTerceros>
+      <PagoTercero>10000.00</PagoTercero>
+    </PagosTerceros>
+    <Anticipos>
+      <Anticipo>10000.00</Anticipo>
+    </Anticipos>
+    <OtrasDeducciones>
+      <OtraDeduccion>10000.00</OtraDeduccion>
+    </OtrasDeducciones>
+    <PensionVoluntaria>10000.00</PensionVoluntaria>
+    <RetencionFuente>10000.00</RetencionFuente>
+    <AFC>10000.00</AFC>
+    <Cooperativa>10000.00</Cooperativa>
+    <EmbargoFiscal>10000.00</EmbargoFiscal>
+    <PlanComplementarios>10000.00</PlanComplementarios>
+    <Educacion>10000.00</Educacion>
+    <Reintegro>10000.00</Reintegro>
+    <Deuda>10000.00</Deuda>
+  </Deducciones>
+  <Redondeo>0.00</Redondeo>
+  <DevengadosTotal>500000.00</DevengadosTotal>
+  <DeduccionesTotal>40000.00</DeduccionesTotal>
+  <ComprobanteTotal>410000.00</ComprobanteTotal>
+</NominaIndividual>

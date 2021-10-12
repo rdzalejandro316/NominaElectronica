@@ -16,4 +16,74 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="FoliosRestantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Request" minOccurs="0" name="request" nillable="true" type="q3:RequestConsultar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FoliosRestantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Response" minOccurs="0" name="FoliosRestantesResult" nillable="true" type="q4:ResponseFoliosRemaining" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstadoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Request" minOccurs="0" name="request" nillable="true" type="q5:RequestConsultarDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstadoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Response" minOccurs="0" name="EstadoDocumentoResult" nillable="true" type="q6:ResponseStatusDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescargaXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Request" minOccurs="0" name="request" nillable="true" type="q7:RequestConsultarDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescargaXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Response" minOccurs="0" name="DescargaXMLResult" nillable="true" type="q8:ResponseDownloadDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescargaPDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Request" minOccurs="0" name="request" nillable="true" type="q9:RequestConsultarDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescargaPDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Response" minOccurs="0" name="DescargaPDFResult" nillable="true" type="q10:ResponseDownloadDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvioCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Request" minOccurs="0" name="request" nillable="true" type="q11:RequestEnviarCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvioCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ServiceSoap.Models.Response" minOccurs="0" name="EnvioCorreoResult" nillable="true" type="q12:ResponseSendEmail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

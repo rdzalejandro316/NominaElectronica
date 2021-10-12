@@ -22,4 +22,56 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ResponseFoliosRemaining">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="foliosRestantes" type="xs:int" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseFoliosRemaining" nillable="true" type="tns:ResponseFoliosRemaining" />
+  <xs:complexType name="ResponseStatusDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ambiente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cadenaCodigoQR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cadenaCune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="consecutivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionEstatusDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="esValidoDIAN" type="xs:boolean" />
+      <xs:element minOccurs="0" name="estatusDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaAceptacionDIAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeDocumento" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="reglasValidacionDIAN" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="trackID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseStatusDocument" nillable="true" type="tns:ResponseStatusDocument" />
+  <xs:complexType name="ResponseDownloadDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="cune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseDownloadDocument" nillable="true" type="tns:ResponseDownloadDocument" />
+  <xs:complexType name="ResponseSendEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseSendEmail" nillable="true" type="tns:ResponseSendEmail" />
 </xs:schema>

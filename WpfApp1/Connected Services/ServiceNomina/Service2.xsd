@@ -76,7 +76,9 @@
       <xs:element minOccurs="0" name="controlInterno1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="controlInterno2" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pdf" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ExtensibleNom" nillable="true" type="tns:ExtensibleNom" />
